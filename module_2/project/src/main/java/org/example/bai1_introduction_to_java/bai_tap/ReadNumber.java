@@ -2,13 +2,13 @@ package org.example.bai1_introduction_to_java.bai_tap;
 
 import java.util.Scanner;
 
-public class Readnumber {
+public class ReadNumber {
     public static void main(String[] args) {
 
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter numbers: ");
-        int num = scanner.nextInt();
+        int num = Integer.parseInt(scanner.nextLine());
 
         if (num == 0) {
             System.out.println("Zero");
@@ -47,8 +47,8 @@ public class Readnumber {
             }
         } else {
 
-            int hangChuc = num / 10;
-            int hangDonVi = num % 10;
+            int hangChuc = num / 10; // chia lấy số nguyên tức là hàng chục
+            int hangDonVi = num % 10; // chia lấy dư tức hàng đơn vị
 
             String hangChucString = "";
             String hangDonViString = "";
@@ -109,11 +109,16 @@ public class Readnumber {
                     break;
             }
 
+            // chỉ in ra 1 số hàng đơn vị
             if (0 <= num && num <= 9) {
                 System.out.println(hangDonViString);
-            } else if (num % 10 == 0) {
+            }
+            // Số chẵn thì chỉ in ra hàng chục
+            else if (num % 10 == 0) {
                 System.out.println(hangChucString);
-            } else {
+            }
+            // vừa có hàng chục và hàng đơn vị
+            else {
                 System.out.println(hangChucString + "-" + hangDonViString);
             }
 
