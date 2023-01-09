@@ -1,4 +1,4 @@
-package org.example.bai5_ke_thua.bai_tap.Point;
+package org.example.bai6_ke_thua.bai_tap.Point;
 
 public class Point3D extends Point2D{
     private float z = 0.0f;

@@ -1,6 +1,4 @@
-package org.example.bai5_ke_thua.bai_tap.Layer;
-
-import java.util.SplittableRandom;
+package org.example.bai6_ke_thua.bai_tap.Layer;
 
 public class Cylinder extends Circle {
 
