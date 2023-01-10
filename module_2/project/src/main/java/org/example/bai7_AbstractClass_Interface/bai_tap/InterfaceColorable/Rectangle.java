@@ -43,7 +43,7 @@ public class Rectangle extends Shape{
     }
 
     public String toString() {
-        return "A Rectangle with width = " + getWidth() + " and length = " + getLength() + ", which is a class of " + super.toString();
+        return "A saddsadas.class with width = " + getWidth() + " and length = " + getLength() + ", which is a class of " + super.toString();
     }
 
 }
