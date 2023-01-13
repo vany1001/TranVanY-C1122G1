@@ -46,7 +46,7 @@ public class TestMyLinkedList {
         myLinkedList.addLast(student5);
         myLinkedList.add(1,student6);
 
-//
+
 //        myLinkedList.remove(3);
         for (int i = 0; i < myLinkedList.size(); i++){
             Student student = (Student) myLinkedList.get(i);
