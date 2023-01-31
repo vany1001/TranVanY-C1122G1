@@ -1,4 +1,4 @@
-package org.example.bai6_ke_thua.bai_tap.Point;
+package org.example.bai10_DSA_danhsach.bai6_ke_thua.bai_tap.Point;
 
 import java.util.Arrays;
 

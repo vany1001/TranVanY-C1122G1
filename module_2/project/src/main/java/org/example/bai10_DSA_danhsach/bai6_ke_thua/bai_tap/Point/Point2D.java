@@ -1,13 +1,14 @@
-package org.example.bai6_ke_thua.bai_tap.PointMoveablePoint;
+package org.example.bai10_DSA_danhsach.bai6_ke_thua.bai_tap.Point;
 
-public class Point {
+public class Point2D {
     private float x = 0.0f;
-    private float y = 0.0f;
+    float y = 0.0f;
 
-    public Point() {
+    public Point2D() {
 
     }
-    public Point(float x, float y) {
+
+    public Point2D(float x, float y) {
         this.x = x;
         this.y = y;
     }
@@ -34,23 +35,15 @@ public class Point {
     }
 
     public float[] getXY() {
-        float[] arr = {x, y};
+        float[] arr = {this.x, this.y};
         return arr;
     }
 
     @Override
     public String toString() {
-        return "Point{" +
-                "x = " + x +
-                ", y = " + y +
+        return "Point2D{" +
+                "x=" + x +
+                ", y=" + y +
                 '}';
     }
-
-    public static void main(String[] args) {
-
-        Point point = new Point(20,7.7f);
-        System.out.println(point);
-    }
-
-
 }

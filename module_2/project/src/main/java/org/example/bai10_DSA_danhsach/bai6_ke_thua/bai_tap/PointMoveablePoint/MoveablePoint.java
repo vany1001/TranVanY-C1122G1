@@ -1,4 +1,4 @@
-package org.example.bai6_ke_thua.bai_tap.PointMoveablePoint;
+package org.example.bai10_DSA_danhsach.bai6_ke_thua.bai_tap.PointMoveablePoint;
 
 public class MoveablePoint extends Point {
     private float xSpeed = 0.0f;
