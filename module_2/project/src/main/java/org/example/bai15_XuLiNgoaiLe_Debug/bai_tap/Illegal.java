@@ -2,7 +2,7 @@ package org.example.bai15_XuLiNgoaiLe_Debug.bai_tap;
 
 import java.util.Scanner;
 
-public class illegal {
+public class Illegal {
     public static void main(String[] args) throws IllegalTriangleException {
 
         Scanner sc = new Scanner(System.in);
