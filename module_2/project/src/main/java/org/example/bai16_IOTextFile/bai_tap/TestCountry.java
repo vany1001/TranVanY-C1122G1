@@ -2,7 +2,7 @@ package org.example.bai16_IOTextFile.bai_tap;
 
 import java.util.List;
 
-public class Test {
+public class TestCountry {
     public static void main(String[] args) {
         Country country1 = new Country(1, "AU", "Australia");
         Country country2 = new Country(2, "CN", "China");
