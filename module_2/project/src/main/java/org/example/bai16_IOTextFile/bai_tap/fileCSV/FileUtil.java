@@ -1,4 +1,6 @@
-package org.example.bai16_IOTextFile.bai_tap;
+package org.example.bai16_IOTextFile.bai_tap.fileCSV;
+
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -6,7 +8,7 @@ import java.util.List;
 
 public class FileUtil {
 
-    private static final String FILE_PATH = "D:\\codegym\\TranVanY-C1122G1\\module_2\\project\\src\\main\\java\\org\\example\\bai16_IOTextFile\\bai_tap\\fileCSV\\countries";
+    private static final String FILE_PATH = "D:\\codegym\\TranVanY-C1122G1\\module_2\\project\\src\\main\\java\\org\\example\\bai16_IOTextFile\\bai_tap\\fileCSV\\countries.csv";
 
     public static List<Country> readCSV() {
         List<Country> countryList = new ArrayList<>();
@@ -38,6 +40,7 @@ public class FileUtil {
             throw new RuntimeException(e);
         } finally {
             try {
+                assert bufferedReader != null;
                 bufferedReader.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
