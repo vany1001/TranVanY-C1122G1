@@ -1,8 +1,11 @@
-package comtr;
+package controllers;
+
+import service.impl.CustomerServiceImpl;
+import service.impl.EmployeeServiceImpl;
 
 import java.util.Scanner;
 
-public class main {
+public class FuramaController {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
