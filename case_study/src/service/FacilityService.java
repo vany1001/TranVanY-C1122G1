@@ -1,4 +1,11 @@
 package service;
 
-public class FacilityService {
+public interface FacilityService {
+    void addNew();
+
+    void addNewVilla();
+
+    void addNewRoom();
+
+    void display();
 }

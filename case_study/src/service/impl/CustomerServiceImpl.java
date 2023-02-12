@@ -8,8 +8,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    private static List<Customer> customerList =new LinkedList<>();
+    private static List<Customer> customerList = new LinkedList<>();
     private Scanner sc = new Scanner(System.in);
+
     @Override
     public void addNew() {
         System.out.println("Input name :");
@@ -63,7 +64,7 @@ public class CustomerServiceImpl implements CustomerService {
         } while (choice < 1 || choice > 5);
         System.out.println("Input address: ");
         String address = sc.nextLine();
-        Customer customer = new Customer(name,birthDay,gender,cmnd,phone,email,customerId,customerType,address);
+        Customer customer = new Customer(name, birthDay, gender, cmnd, phone, email, customerId, customerType, address);
         customerList.add(customer);
         System.out.println("Add new customer successfull");
 
@@ -72,7 +73,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void display() {
-        for (Customer customer: customerList) {
+        for (Customer customer : customerList) {
             System.out.println(customer.toString());
         }
     }
@@ -89,7 +90,7 @@ public class CustomerServiceImpl implements CustomerService {
                 index = i;
             }
         }
-        if (temp){
+        if (temp) {
             System.out.println("Input name :");
             String name = sc.nextLine();
             System.out.println("In put birthday:");
@@ -104,6 +105,8 @@ public class CustomerServiceImpl implements CustomerService {
             String email = sc.nextLine();
             System.out.println("Input customer id:");
             String customerId = sc.nextLine();
+            System.out.println("Input address: ");
+            String address = sc.nextLine();
             int choice = 0;
             String customerType = "";
             do {
@@ -139,9 +142,8 @@ public class CustomerServiceImpl implements CustomerService {
                         System.out.println("Please input from 1 to 5");
                 }
             } while (choice < 1 || choice > 5);
-            System.out.println("Input address: ");
-            String address = sc.nextLine();
-            Customer customer = new Customer(name,birthDay,gender,cmnd,phone,email,customerId,customerType,address);
+
+            Customer customer = new Customer(name, birthDay, gender, cmnd, phone, email, customerId, customerType, address);
 
 
         }
