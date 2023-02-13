@@ -1,11 +1,7 @@
 package service;
 
 public interface FacilityService {
-    void addNew();
-
-    void addNewVilla();
-
-    void addNewRoom();
-
-    void display();
+    void add();
+    void displayFacility();
+    void displayMainTenance();
 }

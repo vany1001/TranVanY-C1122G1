@@ -2,20 +2,20 @@ package models.facility;
 
 public abstract class Facility {
     private String nameService;
-    private int area;
-    private int price;
-    private int maxPeople;
-    private String typeService;
+    private double areaUse;
+    private double cost;
+    private int personMax;
+    private String rent;
 
     public Facility() {
     }
 
-    public Facility(String nameService, int area, int price, int maxPeople, String typeService) {
+    public Facility(String nameService, double areaUse, double cost, int personMax, String rent) {
         this.nameService = nameService;
-        this.area = area;
-        this.price = price;
-        this.maxPeople = maxPeople;
-        this.typeService = typeService;
+        this.areaUse = areaUse;
+        this.cost = cost;
+        this.personMax = personMax;
+        this.rent = rent;
     }
 
     public String getNameService() {
@@ -26,46 +26,46 @@ public abstract class Facility {
         this.nameService = nameService;
     }
 
-    public int getArea() {
-        return area;
+    public double getAreaUse() {
+        return areaUse;
     }
 
-    public void setArea(int area) {
-        this.area = area;
+    public void setAreaUse(double areaUse) {
+        this.areaUse = areaUse;
     }
 
-    public int getPrice() {
-        return price;
+    public double getCost() {
+        return cost;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
-    public int getMaxPeople() {
-        return maxPeople;
+    public int getPersonMax() {
+        return personMax;
     }
 
-    public void setMaxPeople(int maxPeople) {
-        this.maxPeople = maxPeople;
+    public void setPersonMax(int personMax) {
+        this.personMax = personMax;
     }
 
-    public String getTypeService() {
-        return typeService;
+    public String getRent() {
+        return rent;
     }
 
-    public void setTypeService(String typeService) {
-        this.typeService = typeService;
+    public void setRent(String rent) {
+        this.rent = rent;
     }
 
     @Override
     public String toString() {
         return "Facility{" +
                 "nameService='" + nameService + '\'' +
-                ", area=" + area +
-                ", price=" + price +
-                ", maxPeople=" + maxPeople +
-                ", typeService='" + typeService + '\'' +
+                ", areaUse=" + areaUse +
+                ", cost=" + cost +
+                ", personMax=" + personMax +
+                ", rent='" + rent + '\'' +
                 '}';
     }
 }

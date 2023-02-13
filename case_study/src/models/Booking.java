@@ -3,55 +3,55 @@ package models;
 import java.util.Date;
 
 public class Booking {
-    private int bookingId;
-    private Date startDay;
-    private Date endDay;
-    private int customerId;
+    private String idBooking;
+    private Date dayStar;
+    private Date dayEnd;
+    private String idCustomer;
     private String nameService;
     private String typeService;
 
     public Booking() {
     }
 
-    public Booking(int bookingId, Date startDay, Date endDay, int customerId, String nameService, String typeService) {
-        this.bookingId = bookingId;
-        this.startDay = startDay;
-        this.endDay = endDay;
-        this.customerId = customerId;
+    public Booking(String idBooking, Date dayStar, Date dayEnd, String idCustomer, String nameService, String typeService) {
+        this.idBooking = idBooking;
+        this.dayStar = dayStar;
+        this.dayEnd = dayEnd;
+        this.idCustomer = idCustomer;
         this.nameService = nameService;
         this.typeService = typeService;
     }
 
-    public int getBookingId() {
-        return bookingId;
+    public String getIdBooking() {
+        return idBooking;
     }
 
-    public void setBookingId(int bookingId) {
-        this.bookingId = bookingId;
+    public void setIdBooking(String idBooking) {
+        this.idBooking = idBooking;
     }
 
-    public Date getStartDay() {
-        return startDay;
+    public Date getDayStar() {
+        return dayStar;
     }
 
-    public void setStartDay(Date startDay) {
-        this.startDay = startDay;
+    public void setDayStar(Date dayStar) {
+        this.dayStar = dayStar;
     }
 
-    public Date getEndDay() {
-        return endDay;
+    public Date getDayEnd() {
+        return dayEnd;
     }
 
-    public void setEndDay(Date endDay) {
-        this.endDay = endDay;
+    public void setDayEnd(Date dayEnd) {
+        this.dayEnd = dayEnd;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public String getIdCustomer() {
+        return idCustomer;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setIdCustomer(String idCustomer) {
+        this.idCustomer = idCustomer;
     }
 
     public String getNameService() {
@@ -68,17 +68,5 @@ public class Booking {
 
     public void setTypeService(String typeService) {
         this.typeService = typeService;
-    }
-
-    @Override
-    public String toString() {
-        return "Booking{" +
-                "bookingId=" + bookingId +
-                ", startDay=" + startDay +
-                ", endDay=" + endDay +
-                ", customerId=" + customerId +
-                ", nameService='" + nameService + '\'' +
-                ", typeService='" + typeService + '\'' +
-                '}';
     }
 }

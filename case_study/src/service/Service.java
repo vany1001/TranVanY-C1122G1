@@ -1,7 +1,7 @@
 package service;
 
 public interface Service {
-    void addNew();
+    void add();
 
     void display();
 

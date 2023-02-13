@@ -1,23 +1,22 @@
 package models.person;
 
-public class Person {
+public abstract class Person {
     private String name;
-    private String birthDay;
+    private String birtthDay;
     private String gender;
-    private String cmnd;
-    private String phone;
+    private int numberIdentity;
+    private int numberPhone;
     private String email;
 
     public Person() {
     }
 
-
-    public Person(String name, String birthDay, String gender, String cmnd, String phone, String email) {
+    public Person(String name, String birtthDay, String gender, int numberIdentity, int numberPhone, String email) {
         this.name = name;
-        this.birthDay = birthDay;
+        this.birtthDay = birtthDay;
         this.gender = gender;
-        this.cmnd = cmnd;
-        this.phone = phone;
+        this.numberIdentity = numberIdentity;
+        this.numberPhone = numberPhone;
         this.email = email;
     }
 
@@ -29,20 +28,12 @@ public class Person {
         this.name = name;
     }
 
-    public String getBirthDay() {
-        return birthDay;
+    public String getBirtthDay() {
+        return birtthDay;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setBirtthDay(String birtthDay) {
+        this.birtthDay = birtthDay;
     }
 
     public String getGender() {
@@ -53,14 +44,21 @@ public class Person {
         this.gender = gender;
     }
 
-    public String getCmnd() {
-        return cmnd;
+    public int getNumberIdentity() {
+        return numberIdentity;
     }
 
-    public void setCmnd(String cmnd) {
-        this.cmnd = cmnd;
+    public void setNumberIdentity(int numberIdentity) {
+        this.numberIdentity = numberIdentity;
     }
 
+    public int getNumberPhone() {
+        return numberPhone;
+    }
+
+    public void setNumberPhone(int numberPhone) {
+        this.numberPhone = numberPhone;
+    }
 
     public String getEmail() {
         return email;
@@ -72,12 +70,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", birthDay=" + birthDay +
+        return "name='" + name + '\'' +
+                ", birtthDay=" + birtthDay +
                 ", gender='" + gender + '\'' +
-                ", cmnd='" + cmnd + '\'' +
-                ", phone=" + phone +
+                ", numberIdentity=" + numberIdentity +
+                ", numberPhone=" + numberPhone +
                 ", email='" + email + '\'' +
                 '}';
     }

@@ -1,50 +1,50 @@
 package models.facility;
 
 public class Villa extends Facility{
-    private String standarRoom;
-    private int poolArea;
-    private int numberFloor;
+    private String roomStandard;
+    private double areaPool;
+    private double floors;
 
     public Villa() {
     }
 
-    public Villa(String nameService, int area, int price, int maxPeople, String rentalType, String standarRoom, int poolArea, int numberFloor) {
-        super(nameService, area, price, maxPeople, rentalType);
-        this.standarRoom = standarRoom;
-        this.poolArea = poolArea;
-        this.numberFloor = numberFloor;
+    public Villa(String nameService, double areaUse, double cost, int personMax, String rent, String roomStandard, double areaPool, double floors) {
+        super(nameService, areaUse, cost, personMax, rent);
+        this.roomStandard = roomStandard;
+        this.areaPool = areaPool;
+        this.floors = floors;
     }
 
-    public String getStandarRoom() {
-        return standarRoom;
+    public String getRoomStandard() {
+        return roomStandard;
     }
 
-    public void setStandarRoom(String standarRoom) {
-        this.standarRoom = standarRoom;
+    public void setRoomStandard(String roomStandard) {
+        this.roomStandard = roomStandard;
     }
 
-    public int getPoolArea() {
-        return poolArea;
+    public double getAreaPool() {
+        return areaPool;
     }
 
-    public void setPoolArea(int poolArea) {
-        this.poolArea = poolArea;
+    public void setAreaPool(double areaPool) {
+        this.areaPool = areaPool;
     }
 
-    public int getNumberFloor() {
-        return numberFloor;
+    public double getFloors() {
+        return floors;
     }
 
-    public void setNumberFloor(int numberFloor) {
-        this.numberFloor = numberFloor;
+    public void setFloors(double floors) {
+        this.floors = floors;
     }
 
     @Override
     public String toString() {
         return "Villa{" +
-                "standarRoom='" + standarRoom + '\'' +
-                ", poolArea=" + poolArea +
-                ", numberFloor=" + numberFloor +
+                "roomStandard='" + roomStandard + '\'' +
+                ", areaPool=" + areaPool +
+                ", floors=" + floors +
                 '}';
     }
 }

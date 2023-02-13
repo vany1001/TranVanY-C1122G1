@@ -1,34 +1,34 @@
 package models.person;
 
 public class Customer extends Person {
-    private String customerId;
-    private String customerType;
+    private String idCustomer;
+    private String guest;
     private String address;
 
     public Customer() {
     }
 
-    public Customer(String name, String birthDay, String gender, String cmnd, String phone, String email, String customerId, String customerType, String address) {
-        super(name, birthDay, gender, cmnd, phone, email);
-        this.customerId = customerId;
-        this.customerType = customerType;
+    public Customer(String name, String birtthDay, String gender, int numberIdentity, int numberPhone, String email, String idCustomer, String guest, String address) {
+        super(name, birtthDay, gender, numberIdentity, numberPhone, email);
+        this.idCustomer = idCustomer;
+        this.guest = guest;
         this.address = address;
     }
 
-    public String getCustomerId() {
-        return customerId;
+    public String getIdCustomer() {
+        return idCustomer;
     }
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
+    public void setIdCustomer(String idCustomer) {
+        this.idCustomer = idCustomer;
     }
 
-    public String getCustomerType() {
-        return customerType;
+    public String getGuest() {
+        return guest;
     }
 
-    public void setCustomerType(String customerType) {
-        this.customerType = customerType;
+    public void setGuest(String guest) {
+        this.guest = guest;
     }
 
     public String getAddress() {
@@ -42,9 +42,13 @@ public class Customer extends Person {
     @Override
     public String toString() {
         return "Customer{" +
-                "customerId='" + customerId + '\'' +
-                ", customerType='" + customerType + '\'' +
-                ", adđress='" + address + '\'' +
+                "idCustomer='" + idCustomer + '\'' +
+                ", guest='" + guest + '\'' +
+                ", address='" + address + '\'' +
                 '}';
+    }
+
+    public String getInFo() {
+        return this.getName() + "," + this.getBirtthDay() + "," + this.getGender() + "," + this.getNumberIdentity() + "," + this.getNumberPhone() + "," + this.getEmail();
     }
 }

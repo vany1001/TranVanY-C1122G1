@@ -1,28 +1,28 @@
 package models.facility;
 
 public class Room extends Facility{
-    private String freeSevice;
+    private String freeService;
 
     public Room() {
     }
 
-    public Room(String nameService, int area, int price, int maxPeople, String rentalType, String freeSevice) {
-        super(nameService, area, price, maxPeople, rentalType);
-        this.freeSevice = freeSevice;
+    public Room(String nameService, double areaUse, double cost, int personMax, String rent, String freeService) {
+        super(nameService, areaUse, cost, personMax, rent);
+        this.freeService = freeService;
     }
 
-    public String getFreeSevice() {
-        return freeSevice;
+    public String getFreeService() {
+        return freeService;
     }
 
-    public void setFreeSevice(String freeSevice) {
-        this.freeSevice = freeSevice;
+    public void setFreeService(String freeService) {
+        this.freeService = freeService;
     }
 
     @Override
     public String toString() {
         return "Room{" +
-                "freeSevice='" + freeSevice + '\'' +
+                "freeService='" + freeService + '\'' +
                 '}';
     }
 }
