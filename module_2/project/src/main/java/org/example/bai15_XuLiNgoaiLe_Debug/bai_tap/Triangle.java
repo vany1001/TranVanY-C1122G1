@@ -3,19 +3,14 @@ package org.example.bai15_XuLiNgoaiLe_Debug.bai_tap;
 import java.util.Scanner;
 
 public class Triangle {
-    public static void main(String[] args) throws Exception {
-
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập cạnh a: ");
-        double a = sc.nextDouble();
-        System.out.println("Nhập cạnh b: ");
-        double b = sc.nextDouble();
-        System.out.println("Nhập cạnh c: ");
-        double c = sc.nextDouble();
-
-        if (a < 0 || b < 0 || c < 0 || a + b < c || a + c < b || c + b < a)
-            throw new Exception("IllegalTriangleException");
-
+    public void checkTriangle(double a, double b, double c) throws IllegalTriangleException {
+        if (a < 0 || b < 0 || c < 0) {
+            throw new IllegalTriangleException("Lỗi: Cạnh tam giác không thể là số âm");
+        } else if (a + b <= c || a + c <= b || b + c <= a) {
+            throw new IllegalTriangleException("Lỗi: Tam giác không hợp lệ ");
+        } else {
+            System.out.println("Tam giác hợp lệ \n" +
+                    "Kết thúc chương trình");
+        }
     }
 }
