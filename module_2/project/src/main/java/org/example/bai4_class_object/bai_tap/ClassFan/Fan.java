@@ -1,6 +1,6 @@
 package org.example.bai4_class_object.bai_tap.ClassFan;
 
-public class ClassFan {
+public class Fan {
     final int SLOW = 1;
     final int MEDIUM = 2;
     final int FAST = 3;
@@ -41,7 +41,7 @@ public class ClassFan {
         this.color = color;
     }
 
-    public ClassFan() {
+    public Fan() {
 
     }
     public String toString() {

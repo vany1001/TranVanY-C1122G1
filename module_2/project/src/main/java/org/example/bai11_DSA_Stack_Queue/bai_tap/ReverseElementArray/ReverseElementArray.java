@@ -9,7 +9,6 @@ public class ReverseElementArray {
 
         Scanner scanner = new Scanner(System.in);
         int number;
-
         do {
             System.out.print("Nhập số phần tử của mảng: ");
             number = Integer.parseInt(scanner.nextLine());
@@ -22,7 +21,6 @@ public class ReverseElementArray {
         for (int i = 0; i < arr.length; i++) {
             System.out.print("nhâp phần tử thứ " + (i + 1) + ":");
             arr[i] = Integer.parseInt(scanner.nextLine());
-
         }
         System.out.println("Mảng đã nhập là: " + Arrays.toString(arr));
 
@@ -38,12 +36,9 @@ public class ReverseElementArray {
         }
         System.out.println("Mảng dảo ngược là: " + stack1);
 
-
         System.out.println("________//________");
 
-
         Stack<String> stack2 = new Stack<>();
-//        Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập chuỗi bất kì: ");
         String string = scanner.nextLine();
 
@@ -53,7 +48,6 @@ public class ReverseElementArray {
         for (String item : arr1) {
             stack2.push(item);
         }
-
         string = "";
         while (!stack2.isEmpty()) {
             string += stack2.pop() + "";

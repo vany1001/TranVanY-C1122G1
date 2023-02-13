@@ -2,7 +2,7 @@ package org.example.bai4_class_object.bai_tap.QuadraticEquation;
 
 import java.util.Scanner;
 
-public class Main {
+public class TestQuadraticEquation {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class Main {
         System.out.print("NNhập số c: ");
         double c = Double.parseDouble(scanner.nextLine());
 
-        ClassQuadraticEquation classQuadraticEquation = new ClassQuadraticEquation(a, b, c);
+        QuadraticEquation classQuadraticEquation = new QuadraticEquation(a, b, c);
 
         if (classQuadraticEquation.getDiscriminant() == 0) {
             System.out.println("Phương trình có nghiệm kép: " + classQuadraticEquation.getRoot1());

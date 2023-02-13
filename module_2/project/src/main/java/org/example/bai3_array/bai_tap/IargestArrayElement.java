@@ -2,7 +2,7 @@ package org.example.bai3_array.bai_tap;
 
 import java.util.Scanner;
 
-public class IargestElement {
+public class IargestArrayElement {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

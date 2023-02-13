@@ -2,10 +2,11 @@ package org.example.bai11_DSA_Stack_Queue.bai_tap.CheckBrackets;
 
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Brackets {
     public static void main(String[] args) {
-        LinkedList<Character> bStack = new LinkedList<>();
+        Stack<Character> bStack = new Stack<>();
         Scanner sc = new Scanner(System.in);
         System.out.print("kiểm tra chuỗi đầu vào : ");
         String str = sc.nextLine();

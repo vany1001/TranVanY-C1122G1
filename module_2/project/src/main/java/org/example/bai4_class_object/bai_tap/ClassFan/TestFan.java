@@ -1,10 +1,10 @@
 package org.example.bai4_class_object.bai_tap.ClassFan;
 
-public class Main {
+public class TestFan {
     public static void main(String[] args) {
 
-        ClassFan classFan1 = new ClassFan();
-        ClassFan classFan2 = new ClassFan();
+        Fan classFan1 = new Fan();
+        Fan classFan2 = new Fan();
 
         classFan1.setSpeed(classFan1.FAST);
         classFan1.setRadius(10);

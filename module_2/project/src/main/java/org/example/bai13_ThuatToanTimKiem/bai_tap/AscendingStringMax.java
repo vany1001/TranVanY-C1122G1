@@ -11,7 +11,7 @@ public class AscendingStringMax {
         System.out.print("Nhập chuỗi: ");
         String string = input.nextLine();
 
-        LinkedList<Character> max = new LinkedList<>();
+        LinkedList<Character> linkedList = new LinkedList<>();
 
 
         for (int i = 0; i < string.length(); i++) {
@@ -23,14 +23,14 @@ public class AscendingStringMax {
                 }
             }
 
-            if (list.size() > max.size()) {
-                max.clear();
-                max.addAll(list);
+            if (list.size() > linkedList.size()) {
+                linkedList.clear();
+                    linkedList.addAll(list);
             }
             list.clear();
         }
 
-        for (Character ch : max) {
+        for (Character ch : linkedList) {
             System.out.print(ch);
         }
         System.out.println();

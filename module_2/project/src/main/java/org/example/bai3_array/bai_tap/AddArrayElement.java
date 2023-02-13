@@ -3,7 +3,7 @@ package org.example.bai3_array.bai_tap;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class AddArray {
+public class AddArrayElement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] arr = new int[4];

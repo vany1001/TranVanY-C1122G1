@@ -3,7 +3,7 @@ package org.example.bai11_DSA_Stack_Queue.bai_tap.DecimalBinary;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class NumberS {
+public class DecimalToBinary {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
