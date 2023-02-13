@@ -6,39 +6,33 @@ import java.util.List;
 
 public class ReadAndWriteFile {
 
-    public List<String> readFile(String filepath) {
-        List<String> list = new ArrayList<>();
+    public static void copyFile(String fileSource, String fileTarget) {
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
         try {
-            File file = new File(filepath);
-
-            if (!file.exists()) {
-                throw new FileNotFoundException();
+            fileReader = new FileReader(fileSource);
+            bufferedReader = new BufferedReader(fileReader);
+            fileWriter = new FileWriter(fileTarget);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                bufferedWriter.write(line + "\n ");
             }
-
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String line = "";
-            while ((line = br.readLine()) != null) {
-                list.add(line);
-            }
-            br.close();
-        } catch (Exception e) {
-            System.err.println("File không tồn tại hoặc nội dung có lỗi!");
-        }
-        return list;
-    }
-
-    public void writeFile(String filePath, List<String> list) {
-        try {
-            FileWriter writer = new FileWriter(filePath, true);
-            BufferedWriter bufferedWriter = new BufferedWriter(writer);
-            for (int i = 0; i < list.size(); i++) {
-                bufferedWriter.write("\n" + list.get(i));
-            }
-            bufferedWriter.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                bufferedReader.close();
+                bufferedWriter.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
         }
     }
-
 
 }
