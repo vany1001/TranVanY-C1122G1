@@ -3,11 +3,8 @@ package models.facility;
 public class Room extends Facility{
     private String freeService;
 
-    public Room() {
-    }
-
-    public Room(String nameService, double areaUse, double cost, int personMax, String rent, String freeService) {
-        super(nameService, areaUse, cost, personMax, rent);
+    public Room(String serviceName, String name, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType, String freeService) {
+        super(serviceName, name, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.freeService = freeService;
     }
 
@@ -19,10 +16,16 @@ public class Room extends Facility{
         this.freeService = freeService;
     }
 
+
     @Override
     public String toString() {
-        return "Room{" +
+        return "Room{" + super.toString() +
                 "freeService='" + freeService + '\'' +
-                '}';
+                "} ";
+    }
+
+    public String formatCSVRoom() {
+        final String COMMA = ",";
+        return super.convertLineFacility() + COMMA + freeService;
     }
 }

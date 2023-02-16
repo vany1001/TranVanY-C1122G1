@@ -2,22 +2,22 @@ package models.person;
 
 public abstract class Person {
     private String name;
-    private String birtthDay;
+    private String dayOfBirth;
     private String gender;
-    private int numberIdentity;
-    private int numberPhone;
+    private String idCode;
+    private String phoneNumber;
     private String email;
 
-    public Person() {
+    public Person(String name, String dayOfBirth, String gender, String idCode, String phoneNumber, String email) {
+        this.name = name;
+        this.dayOfBirth = dayOfBirth;
+        this.gender = gender;
+        this.idCode = idCode;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
-    public Person(String name, String birtthDay, String gender, int numberIdentity, int numberPhone, String email) {
-        this.name = name;
-        this.birtthDay = birtthDay;
-        this.gender = gender;
-        this.numberIdentity = numberIdentity;
-        this.numberPhone = numberPhone;
-        this.email = email;
+    public Person() {
     }
 
     public String getName() {
@@ -28,15 +28,15 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String getBirtthDay() {
-        return birtthDay;
+    public String getDayOfBirth() {
+        return dayOfBirth;
     }
 
-    public void setBirtthDay(String birtthDay) {
-        this.birtthDay = birtthDay;
+    public void setDayOfBirth(String dayOfBirth) {
+        this.dayOfBirth = dayOfBirth;
     }
 
-    public String getGender() {
+    public String isGender() {
         return gender;
     }
 
@@ -44,20 +44,20 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public int getNumberIdentity() {
-        return numberIdentity;
+    public String getIdCode() {
+        return idCode;
     }
 
-    public void setNumberIdentity(int numberIdentity) {
-        this.numberIdentity = numberIdentity;
+    public void setIdCode(String idCode) {
+        this.idCode = idCode;
     }
 
-    public int getNumberPhone() {
-        return numberPhone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setNumberPhone(int numberPhone) {
-        this.numberPhone = numberPhone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -68,14 +68,21 @@ public abstract class Person {
         this.email = email;
     }
 
+
     @Override
     public String toString() {
-        return "name='" + name + '\'' +
-                ", birtthDay=" + birtthDay +
-                ", gender='" + gender + '\'' +
-                ", numberIdentity=" + numberIdentity +
-                ", numberPhone=" + numberPhone +
-                ", email='" + email + '\'' +
-                '}';
+        return
+                ", name='" + name + '\'' +
+                        ", dayOfBirth='" + dayOfBirth + '\'' +
+                        ", gender='" + gender + '\'' +
+                        ", idCode='" + idCode + '\'' +
+                        ", phoneNumber='" + phoneNumber + '\'' +
+                        ", email='" + email + '\'' +
+                        '}';
+    }
+
+    public String convertLine(){
+        String comma = ",";
+        return this.name+comma+this.dayOfBirth+comma+this.gender+comma+this.idCode+comma+this.phoneNumber+comma+this.email;
     }
 }

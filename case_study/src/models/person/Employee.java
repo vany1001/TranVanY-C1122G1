@@ -1,65 +1,71 @@
 package models.person;
 
 public class Employee extends Person{
-    private String idEmployee;
-    private String levels;
-    private String location;
-    private double income;
+    private String id;
+    private String academicLevel;
+    private String position;
+    private String salary;
+
+
+    public Employee(String id,String name, String dayOfBirth, String gender, String idCode, String phoneNumber, String email,
+                    String academicLevel, String position, String salary) {
+        super(name, dayOfBirth, gender, idCode, phoneNumber, email);
+        this.id = id;
+        this.academicLevel = academicLevel;
+        this.position = position;
+        this.salary = salary;
+    }
 
     public Employee() {
+
     }
 
-    public Employee(String name, String birtthDay, String gender, int numberIdentity, int numberPhone, String email, String idEmployee, String levels, String location, double income) {
-        super(name, birtthDay, gender, numberIdentity, numberPhone, email);
-        this.idEmployee = idEmployee;
-        this.levels = levels;
-        this.location = location;
-        this.income = income;
+    public String getId() {
+        return id;
     }
 
-    public String getIdEmployee() {
-        return idEmployee;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setIdEmployee(String idEmployee) {
-        this.idEmployee = idEmployee;
+    public String getAcademicLevel() {
+        return academicLevel;
     }
 
-    public String getLevels() {
-        return levels;
+    public void setAcademicLevel(String academicLevel) {
+        this.academicLevel = academicLevel;
     }
 
-    public void setLevels(String levels) {
-        this.levels = levels;
+    public String getPosition() {
+        return position;
     }
 
-    public String getLocation() {
-        return location;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public String getSalary() {
+        return salary;
     }
 
-    public double getIncome() {
-        return income;
+    public void setSalary(String salary) {
+        this.salary = salary;
     }
 
-    public void setIncome(double income) {
-        this.income = income;
-    }
+
 
     @Override
     public String toString() {
-        return "Employee{" +super.toString() +
-                "idEmployee='" + idEmployee + '\'' +
-                ", levels='" + levels + '\'' +
-                ", location='" + location + '\'' +
-                ", income=" + income +
-                '}';
+        return "Employee{" +
+                "id='" + id + '\'' + super.toString()+
+                ", academicLevel='" + academicLevel + '\'' +
+                ", position='" + position + '\'' +
+                ", salary='" + salary + '\'' +
+                "} " ;
     }
 
-    public String getInFo() {
-        return this.getName() + "," + this.getBirtthDay() + "," + this.getGender() + "," + this.getNumberIdentity() + "," + this.getNumberPhone() + "," + this.getEmail();
+    public String formatCSVEmployee(){
+        final String COMMA = ",";
+        return this.id+COMMA+super.convertLine()+COMMA+this.academicLevel+COMMA+this.position+COMMA+this.salary;
     }
 }

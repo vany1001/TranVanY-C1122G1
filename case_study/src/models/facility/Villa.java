@@ -2,17 +2,16 @@ package models.facility;
 
 public class Villa extends Facility{
     private String roomStandard;
-    private double areaPool;
-    private double floors;
+    private String poolArea;
+    private String numberOfFloors;
 
-    public Villa() {
-    }
-
-    public Villa(String nameService, double areaUse, double cost, int personMax, String rent, String roomStandard, double areaPool, double floors) {
-        super(nameService, areaUse, cost, personMax, rent);
+    public Villa(String serviceName, String name, String usableArea, String rentalCosts
+            , String maximumNumberOfPeople,
+                 String rentalType, String roomStandard, String poolArea, String numberOfFloors) {
+        super(serviceName, name, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.roomStandard = roomStandard;
-        this.areaPool = areaPool;
-        this.floors = floors;
+        this.poolArea = poolArea;
+        this.numberOfFloors = numberOfFloors;
     }
 
     public String getRoomStandard() {
@@ -23,28 +22,35 @@ public class Villa extends Facility{
         this.roomStandard = roomStandard;
     }
 
-    public double getAreaPool() {
-        return areaPool;
+    public String getPoolArea() {
+        return poolArea;
     }
 
-    public void setAreaPool(double areaPool) {
-        this.areaPool = areaPool;
+    public void setPoolArea(String poolArea) {
+        this.poolArea = poolArea;
     }
 
-    public double getFloors() {
-        return floors;
+    public String getNumberOfFloors() {
+        return numberOfFloors;
     }
 
-    public void setFloors(double floors) {
-        this.floors = floors;
+    public void setNumberOfFloors(String numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
     }
+
+
 
     @Override
     public String toString() {
-        return "Villa{" +
+        return "Villa{" + super.toString()+
                 "roomStandard='" + roomStandard + '\'' +
-                ", areaPool=" + areaPool +
-                ", floors=" + floors +
-                '}';
+                ", poolArea='" + poolArea + '\'' +
+                ", numberOfFloors='" + numberOfFloors + '\'' +
+                "} " ;
+    }
+
+    public String formatCSVVilla(){
+        final String COMMA=",";
+        return super.convertLineFacility()+COMMA+roomStandard+COMMA+poolArea+COMMA+numberOfFloors;
     }
 }
