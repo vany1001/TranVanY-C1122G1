@@ -73,7 +73,7 @@ public class FacilityManagement {
                                 if (!newUsableArea.matches(Regex.REGEX_AREA)) {
                                     System.err.println("Please input again");
                                 }
-                            } while (!newUsableArea.matches(Regex.REGEX_AREA));
+                            } while (!newUsableArea.matches(Regex.REGEX_AREA) );
 
                             String newRentalCosts;
                             do {

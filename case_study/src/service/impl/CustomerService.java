@@ -4,9 +4,6 @@ import models.person.Customer;
 import repository.ICustomerRepository;
 import repository.impl.CustomerRepository;
 import service.ICustomerService;
-import until.ReadAndWriteCustomer;
-import java.util.LinkedList;
-import java.util.List;
 
 
 public class CustomerService implements ICustomerService {

@@ -1,13 +1,15 @@
 package controllers;
 
 import models.person.Employee;
+import repository.impl.EmployeeRepository;
 import service.IEmployeeService;
 import service.impl.EmployeeService;
 
 import java.util.Scanner;
 
 public class EmployeeManagement {
-    public IEmployeeService displayMainMenuEmployee() {
+    public void displayMainMenuEmployee() {
+        EmployeeRepository employeeRepository = new EmployeeRepository();
         Scanner sc = new Scanner(System.in);
         IEmployeeService employeeService = new EmployeeService();
         do {
@@ -27,7 +29,7 @@ public class EmployeeManagement {
             }
             switch (choiceEmployee) {
                 case 1:
-                    employeeService.display();
+                    employeeRepository.display();
                     break;
                 case 2:
                     System.out.println("Input Id");
@@ -46,20 +48,6 @@ public class EmployeeManagement {
                     String email = sc.nextLine();
                     System.out.println("Input Academic Level");
                     String academicLevel = sc.nextLine();
-//                    int choice2= Integer.parseInt(sc.nextLine());
-//                    System.out.println("------ Choice academic level-----\n"+
-//                            "1. Trung cấp \n" +
-//                            "2. Cao đẳng \n" +
-//                            "3. Đại học \n" +
-//                            "4. Sau đại học \n" +
-//                            "-----------------\n" +
-//                            "Input your choice");
-//                    switch (choice2){
-//                        case 1:
-//
-//
-//                    }
-
                     System.out.println("Input position");
                     String position = sc.nextLine();
                     System.out.println("Input salary");
@@ -169,7 +157,7 @@ public class EmployeeManagement {
                     }
                     break;
                 case 5:
-                    return employeeService;
+                    return;
 
                 default:
                     System.out.println("Please input choice in menu");
